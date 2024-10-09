@@ -20,7 +20,8 @@ last = str(result.p)
 print(last)
 
 generate = iter_iprange(result.p[0], result.p[1], step=1 )
-    
+for i in generate:
+    print(i) #result of ping
     
 def ping(host):
     if platform.system().lower == "windows":
@@ -28,5 +29,5 @@ def ping(host):
     else:
         ping_str = "-c 1"
 
-    resposta = os.system("ping" + generate + "" + host)
+    resposta = os.system(ping + "ping_str" + generate + "" + host)
     return resposta == 0
