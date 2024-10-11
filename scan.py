@@ -25,14 +25,14 @@ def ping(host, f1):
         if output.returncode == 0:
             print(f"Ping bem-sucedido em {host}")
             print(output.stderr)
+            resultado = f"Ping bem-sucedido em {host}"
 
-
-        #aqui fica para teste se retornar mensagem de ip ruim
-        """else:
+        
+        else:
             print(f"Falha ao pingar {host}")
-            print(output.stderr)"""
+            return resultado
     except Exception as e:
         print(f"Erro ao tentar pingar {host}:{e}")
 
-    resultado = f"Ping bem-sucedido em {host}"
-    return resultado
+    
+    
